@@ -1,2 +1,2 @@
-# timesheet
-Программа составления табеля
+# jdm
+Tutorial project for Java Development Meet

@@ -1,0 +1,7 @@
+ru\jdm\timesheet\entity\TimeData.class
+ru\jdm\timesheet\repository\UserRepository.class
+ru\jdm\timesheet\AppController.class
+ru\jdm\timesheet\repository\TimeDataRepository.class
+ru\jdm\timesheet\entity\User.class
+ru\jdm\timesheet\TimeDataController.class
+ru\jdm\timesheet\config\JpaConfig.class

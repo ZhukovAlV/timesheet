@@ -1,13 +1,16 @@
 package ru.jdm.timesheet;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import ru.jdm.timesheet.entity.User;
 import ru.jdm.timesheet.repository.UserRepository;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -43,6 +46,25 @@ public class AppController
         ModelAndView mv = new ModelAndView();
         mv.addObject("users", users);
         mv.setViewName("user/list");
+
+        return mv;
+    }
+
+    /*   @PostMapping(value = "/save")
+       public ModelAndView saveUser(@RequestBody User user) {
+           userRepository.save(user);
+           ModelAndView mv = new ModelAndView();
+           mv.addObject("user", user);
+           mv.setViewName("user/form");
+
+           return mv;
+       }*/
+    @PostMapping("/save")
+    public ModelAndView saveUser(@ModelAttribute("user")User user) {
+        userRepository.save(user);
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("user", user);
+        mv.setViewName("user/form");
 
         return mv;
     }

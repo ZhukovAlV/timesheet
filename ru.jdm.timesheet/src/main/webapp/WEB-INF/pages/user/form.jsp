@@ -6,7 +6,7 @@
 </head>
 <body>
     Сотрудник
-    <form id="user" method="POST" action="./save">
+    <form id="user" method="POST" action="./user/save">
         <input id="userId" name="userId" value="${user.userId}" type="hidden"/>
         Login :<input id="login" name="login" value="${user.login}" type="text"/><br/>
         Name:<input id="name" name="name" value="${user.name}" type="text"/><br/>

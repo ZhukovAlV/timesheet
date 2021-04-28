@@ -1,2 +1,2 @@
 # jdm
-Tutorial project for Java Development Meet
+Программа для составления табеля отделам организации

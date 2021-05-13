@@ -3,10 +3,7 @@ package ru.jdm.timesheet.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Data
@@ -14,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "USER")
 public class User {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "ID")
   private Long userId;
   @Column(name = "LOGIN")
